@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="amazon-dynamodb-transactions-1.1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../dynamodb-transactions/target/amazon-dynamodb-transactions-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

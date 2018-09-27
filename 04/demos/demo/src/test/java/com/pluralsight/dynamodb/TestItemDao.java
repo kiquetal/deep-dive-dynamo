@@ -16,6 +16,8 @@ public class TestItemDao {
 
     @Before
     public void before() {
+      System.setProperty("sqlite4java.library.path", "native-libs");
+
         dynamodb = DynamoDBEmbedded.create().amazonDynamoDB();
         Utils.createTables(dynamodb);
         itemDao = new ItemDao(dynamodb);
@@ -24,6 +26,7 @@ public class TestItemDao {
     @Test
     public void testDynamoDB() {
         Item item = itemDao.put(new Item());
+        System.out.println(item);
         assertNotNull(itemDao.get(item.getId()));
     }
 }
