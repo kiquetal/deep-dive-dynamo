@@ -6,6 +6,8 @@ import com.amazonaws.services.dynamodbv2.model.*;
 import com.amazonaws.services.dynamodbv2.transactions.TransactionManager;
 import com.pluralsight.dynamodb.domain.Comment;
 import com.pluralsight.dynamodb.domain.Item;
+import com.pluralsight.dynamodb.domain.Msisdn;
+import com.pluralsight.dynamodb.domain.Subscriptions;
 
 public class Utils {
 
@@ -14,6 +16,8 @@ public class Utils {
 
         createTable(Item.class, dynamoDBMapper, dynamoDB);
         createTable(Comment.class, dynamoDBMapper, dynamoDB);
+        createTable(Msisdn.class,dynamoDBMapper,dynamoDB);
+        createTable(Subscriptions.class,dynamoDBMapper,dynamoDB);
     }
 
     private static void createTable(Class<?> itemClass, DynamoDBMapper dynamoDBMapper, AmazonDynamoDB dynamoDB) {
